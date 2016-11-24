@@ -85,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FileDrop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FileHashedPrompt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +103,9 @@
     </Compile>
     <Compile Include="FileCreatedDetected.xaml.cs">
       <DependentUpon>FileCreatedDetected.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileDrop.xaml.cs">
+      <DependentUpon>FileDrop.xaml</DependentUpon>
     </Compile>
     <Compile Include="FileHashedPrompt.xaml.cs">
       <DependentUpon>FileHashedPrompt.xaml</DependentUpon>

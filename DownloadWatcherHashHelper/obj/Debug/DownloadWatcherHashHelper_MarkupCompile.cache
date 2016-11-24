@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Backup\2015-06-08 flash drive backup\visualstudio projects\DownloadWatcherHashHelper\DownloadWatcherHashHelper\obj\Debug\
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\
 DownloadWatcherHashHelper
 none
 false
 DEBUG;TRACE
-D:\Backup\2015-06-08 flash drive backup\visualstudio projects\DownloadWatcherHashHelper\DownloadWatcherHashHelper\App.xaml
-31984514494
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\App.xaml
+4-452559209
 
-8-657099881
+9-443155656
 12-1401562060
-FileCreatedDetected.xaml;FileHashedPrompt.xaml;MainWindow.xaml;
+FileCreatedDetected.xaml;FileDrop.xaml;FileHashedPrompt.xaml;MainWindow.xaml;
 
 False
 

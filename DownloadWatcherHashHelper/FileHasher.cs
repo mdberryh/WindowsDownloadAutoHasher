@@ -18,13 +18,35 @@ namespace DownloadWatcherHashHelper
 
         public FileHasher()
         {
-
         }
-
-        public string getFileHash(string filePath)
+        
+        public string getFileHashSha256(string filePath)
         {
             //TODO: implement
-            return null;
+            string tocompare = "";
+            using (var sha256 = SHA256.Create())
+            {
+                using (var stream = File.OpenRead(filePath))
+                {
+                    tocompare = BitConverter.ToString(sha256.ComputeHash(stream)).Replace("-", "").ToLower();
+                }
+            }
+
+            return tocompare;
+        }
+        public string getFileHashMd5(string filePath)
+        {
+            //TODO: implement
+            string tocompare = "";
+            using (var sha256 = MD5.Create())
+            {
+                using (var stream = File.OpenRead(filePath))
+                {
+                    tocompare = BitConverter.ToString(sha256.ComputeHash(stream)).Replace("-", "").ToLower();
+                }
+            }
+
+            return tocompare;
         }
 
         public bool compareHash(string filePath, string userHash)
@@ -39,56 +61,33 @@ namespace DownloadWatcherHashHelper
             Console.WriteLine("hash length " + userHash.Length );
             if (userHash.Length == 32) //number of characters in a md5 hash string
             {
-                using (var md5 = MD5.Create())
-                {
-                    using (var stream = File.OpenRead(filePath))
-                    {
-                        tocompare = BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", "").ToLower();
-                    }
-                }
+                tocompare = getFileHashMd5(filePath);
             }
             else if (userHash.Length == 64)
             {
                 //we will assume it is sha256
-                using (var sha256 = SHA256.Create())
-                {
-                    using (var stream = File.OpenRead(filePath))
-                    {
-                        tocompare = BitConverter.ToString(sha256.ComputeHash(stream)).Replace("-", "").ToLower();
-                    }
-                }
+                tocompare = getFileHashSha256(filePath);
             }
             else
             {
                 //we dont know so check both
                 Console.WriteLine("Couldn't figure out what hash type...");
-                using (var md5 = MD5.Create())
-                {
-                    using (var stream = File.OpenRead(filePath))
-                    {
-                        tocompare = BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", "").ToLower();
-                    }
-                }
+                tocompare = getFileHashMd5(filePath);
 
                 if (tocompare == userHash)
                 {
                     return true;
                 }
 
-                using (var sha256 = SHA256.Create())
-                {
-                    using (var stream = File.OpenRead(filePath))
-                    {
-                        tocompare = BitConverter.ToString(sha256.ComputeHash(stream)).Replace("-", "").ToLower();
-                    }
-                }
+                tocompare = getFileHashSha256(filePath);
+
                 if (tocompare == userHash)
                 {
                     return true;
                 }
-
-
+                
             }
+
             Console.WriteLine("Program's hash is: ");
             Console.WriteLine(tocompare);
             Console.WriteLine("Users's hash is: ");

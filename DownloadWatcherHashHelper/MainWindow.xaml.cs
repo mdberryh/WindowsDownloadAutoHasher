@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Threading;
 using System.Windows.Threading;
+using Microsoft.Win32;
 
 namespace DownloadWatcherHashHelper
 {
@@ -28,16 +29,22 @@ namespace DownloadWatcherHashHelper
         private static FileCreatedDetected fileCreatedWindow;
         private static MainWindow main;
         private List<string> createdFiles = new List<string>();
-       
+
+        public MainWindow(MainWindow _main) : this()
+        {
+            //if I need to have a popup I can do that with this window.
+            BtnCompare.Visibility = Visibility.Hidden;
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
-           // fileCreatedWindow = new FileCreatedDetected();
-           // fileCreatedWindow.Hide();
-            
+            // fileCreatedWindow = new FileCreatedDetected();
+            // fileCreatedWindow.Hide();
+
             string PathTowatch = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            CreateFileWatcher( Directory.GetParent(PathTowatch) + "\\Downloads\\");
+            CreateFileWatcher(Directory.GetParent(PathTowatch) + "\\Downloads\\");
             //this.Hide();
             main = this;
 
@@ -63,10 +70,10 @@ namespace DownloadWatcherHashHelper
             // Only watch text files.
             //watcher.Filter = "*.txt";
 
-           // txtBox.Text = Directory.GetParent(PathTowatch) + "\\Downloads\\";
+            // txtBox.Text = Directory.GetParent(PathTowatch) + "\\Downloads\\";
             //Console.WriteLine("path: " + Directory.GetParent(PathTowatch) + "\\Downloads\\");
             // Add event handlers.
-           // watcher.Changed += new FileSystemEventHandler(OnChanged);
+            // watcher.Changed += new FileSystemEventHandler(OnChanged);
             watcher.Created += new FileSystemEventHandler(OnChanged);
             //watcher.Deleted += new FileSystemEventHandler(OnChanged);
             //watcher.Renamed += new RenamedEventHandler(OnRenamed);
@@ -87,7 +94,7 @@ namespace DownloadWatcherHashHelper
 
 
 
-        
+
         // Define the event handlers.
         private static void OnChanged(object source, FileSystemEventArgs e)
         {
@@ -98,12 +105,12 @@ namespace DownloadWatcherHashHelper
                 //Thread t = new Thread(new ThreadStart(ThreadProc));
                 //t.SetApartmentState(ApartmentState.STA);
                 //t.Start();
-               // fileCreatedWindow.ShowDialog();
+                // fileCreatedWindow.ShowDialog();
 
-                Action action = delegate()
+                Action action = delegate ()
                 {
                     // do stuff to UI
-                    main.txtBox.Text = e.Name;
+                    main.txtBxFileName.Text = e.Name;
                     main.createdFiles.Add(e.FullPath);
                     Console.WriteLine("Running thread");
                     //activate function to handle the file.
@@ -130,5 +137,81 @@ namespace DownloadWatcherHashHelper
             this.Hide();
         }
 
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            //Open the Settings editor...
+            //this is where they should be able to change which file types are watched.
+            // change which directory is watched
+            // set whether this app should auto start.
+            // set if this app should start in minimized mode, where is is only a running process.
+
+
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnCompare_Click(object sender, RoutedEventArgs e)
+        {
+            //popup window for file to compare against.
+            var popup = new MainWindow(this);
+            popup.ShowDialog();
+
+        }
+
+        private void btnFileBrowse_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+
+            // Get the selected file name and display in a TextBox 
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // Open document 
+                string filename = openFileDialog.FileName;
+                txtBxFileName.Text = filename;
+                txtBxFileSize.Text = GetFileSize(filename).ToString();
+                //hash the file
+                //txtBxFileHash.Text = GetFileHash(filename);
+                cmbHashType.SelectedItem = cmbHashType.Items[1]; //sha256
+            }
+        }
+
+        private string GetFileHash(string path)
+        {
+            var fhasher = new FileHasher();
+            return fhasher.getFileHashSha256(path);
+
+        }
+        private static long GetFileSize(string filename)
+        {
+            FileInfo fi = new FileInfo(filename);
+            return fi.Length;
+        }
+        private void cmbHashType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var fhasher = new FileHasher();
+
+            var item = (ComboBoxItem)e.AddedItems[0];
+            string text = item.Content.ToString();
+            if (text == "MD5")
+            {
+                //set to md5 hash
+                txtBxFileHash.Text = fhasher.getFileHashMd5(txtBxFileName.Text);
+            }
+            if (text == "Sha256")
+            {
+                //set to md5 hash
+                txtBxFileHash.Text = fhasher.getFileHashSha256(txtBxFileName.Text);
+            }
+
+        }
     }
 }

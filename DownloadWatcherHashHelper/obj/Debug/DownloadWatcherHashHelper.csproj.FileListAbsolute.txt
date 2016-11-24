@@ -19,3 +19,27 @@ D:\Backup\2015-06-08 flash drive backup\visualstudio projects\DownloadWatcherHas
 D:\Backup\2015-06-08 flash drive backup\visualstudio projects\DownloadWatcherHashHelper\DownloadWatcherHashHelper\bin\Debug\DownloadWatcherHashHelper.pdb
 D:\Backup\2015-06-08 flash drive backup\visualstudio projects\DownloadWatcherHashHelper\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.exe.manifest
 D:\Backup\2015-06-08 flash drive backup\visualstudio projects\DownloadWatcherHashHelper\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.application
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\bin\Debug\DownloadWatcherHashHelper.exe.config
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.exe
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.pdb
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\bin\Debug\DownloadWatcherHashHelper.exe.manifest
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\bin\Debug\DownloadWatcherHashHelper.application
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\bin\Debug\DownloadWatcherHashHelper.exe
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\bin\Debug\DownloadWatcherHashHelper.pdb
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.csprojResolveAssemblyReference.cache
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileCreatedDetected.baml
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileHashedPrompt.baml
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\MainWindow.baml
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileCreatedDetected.g.cs
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileDrop.g.cs
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileHashedPrompt.g.cs
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\MainWindow.g.cs
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\App.g.cs
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper_MarkupCompile.cache
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper_MarkupCompile.lref
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileDrop.baml
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.g.resources
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.Properties.Resources.resources
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.csproj.GenerateResource.Cache
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.exe.manifest
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.application
