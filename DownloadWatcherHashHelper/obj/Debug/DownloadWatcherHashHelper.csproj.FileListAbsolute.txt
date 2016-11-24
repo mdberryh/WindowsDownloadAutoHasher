@@ -43,3 +43,5 @@ C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashH
 C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.csproj.GenerateResource.Cache
 C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.exe.manifest
 C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\DownloadWatcherHashHelper.application
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileHashingControl.g.cs
+C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\obj\Debug\FileHashingControl.baml

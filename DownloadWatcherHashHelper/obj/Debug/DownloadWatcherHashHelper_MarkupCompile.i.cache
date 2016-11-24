@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Matthew\Documents\GitHub\WindowsDownloadAutoHasher\DownloadWatcherHashHelper\App.xaml
-4-452559209
+51980746962
 
-13-1993234133
+1433897877
 12-1401562060
-FileCreatedDetected.xaml;FileDrop.xaml;FileHashedPrompt.xaml;MainWindow.xaml;
+FileCreatedDetected.xaml;FileDrop.xaml;FileHashedPrompt.xaml;FileHashingControl.xaml;MainWindow.xaml;
 
-False
+True
 

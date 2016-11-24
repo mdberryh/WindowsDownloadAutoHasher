@@ -33,12 +33,16 @@ namespace DownloadWatcherHashHelper
         public MainWindow(MainWindow _main) : this()
         {
             //if I need to have a popup I can do that with this window.
-            BtnCompare.Visibility = Visibility.Hidden;
+            //BtnCompare.Visibility = Visibility.Hidden;
         }
 
         public MainWindow()
         {
             InitializeComponent();
+
+
+            FirstHash.Children.Add(new FileHashingControl());
+            FirstHash.Children.Add(new FileHashingControl());
 
             // fileCreatedWindow = new FileCreatedDetected();
             // fileCreatedWindow.Hide();
@@ -110,7 +114,7 @@ namespace DownloadWatcherHashHelper
                 Action action = delegate ()
                 {
                     // do stuff to UI
-                    main.txtBxFileName.Text = e.Name;
+                  //  main.txtBxFileName.Text = e.Name;
                     main.createdFiles.Add(e.FullPath);
                     Console.WriteLine("Running thread");
                     //activate function to handle the file.
@@ -176,11 +180,11 @@ namespace DownloadWatcherHashHelper
             {
                 // Open document 
                 string filename = openFileDialog.FileName;
-                txtBxFileName.Text = filename;
-                txtBxFileSize.Text = GetFileSize(filename).ToString();
+            //    txtBxFileName.Text = filename;
+            //    txtBxFileSize.Text = GetFileSize(filename).ToString();
                 //hash the file
                 //txtBxFileHash.Text = GetFileHash(filename);
-                cmbHashType.SelectedItem = cmbHashType.Items[1]; //sha256
+             //   cmbHashType.SelectedItem = cmbHashType.Items[1]; //sha256
             }
         }
 
@@ -204,12 +208,12 @@ namespace DownloadWatcherHashHelper
             if (text == "MD5")
             {
                 //set to md5 hash
-                txtBxFileHash.Text = fhasher.getFileHashMd5(txtBxFileName.Text);
+               // txtBxFileHash.Text = fhasher.getFileHashMd5(txtBxFileName.Text);
             }
             if (text == "Sha256")
             {
                 //set to md5 hash
-                txtBxFileHash.Text = fhasher.getFileHashSha256(txtBxFileName.Text);
+               // txtBxFileHash.Text = fhasher.getFileHashSha256(txtBxFileName.Text);
             }
 
         }
