@@ -3,20 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="275.07" Width="650">
     <Grid Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
-        <StackPanel HorizontalAlignment="Center">
-           
-            <!--<TextBlock TextWrapping="Wrap" FontSize="20">
-                            This program is monitoring your downloads &#xA;Folder. If a exe, iso, or msi file is created, you&#xA;will be prompted for a hash value. This will&#xD;&#xA;Provide a way to confirm that that the file &#xD;&#xA;has not been modified by unauthorized &#xD;&#xA;sources.
-                        </TextBlock>-->
-            
-                        <TextBlock TextWrapping="Wrap" FontSize="20">
-                            File Hasher
-                        </TextBlock>
-                    </StackPanel>
-        <StackPanel  x:Name="FirstHash" Orientation="Horizontal">
 
-            
+        <StackPanel Orientation="Vertical">
+
+            <TextBlock TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Center">
+                            File Hasher
+            </TextBlock>
+            <StackPanel  x:Name="FirstHash" Orientation="Horizontal"></StackPanel>
+
+
+                <Button Name="BtnCompare" Content="Compare" HorizontalAlignment="Center" Width="75" Click="BtnCompare_Click"/>
+            <Button Content="OK" HorizontalAlignment="Right" Width="75" Click="Button_Click"/>
         </StackPanel>
+
         <!--<DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">

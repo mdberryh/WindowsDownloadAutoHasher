@@ -26,6 +26,22 @@ namespace DownloadWatcherHashHelper
         {
             InitializeComponent();
         }
+        public string GetHash()
+        {
+            return txtBxFileHash.Text.Trim();
+        }
+        public bool ValidHash()
+        {
+            //TODO: do we have a valid hash size?
+
+            if(txtBxFileHash.Text == "")
+            {
+                //we do not have a hash...
+                return false;
+            }
+
+            return true;
+        }
 
         private string fullFilePath = "";
         private void cmbHashType_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -47,8 +47,8 @@ namespace DownloadWatcherHashHelper
             // fileCreatedWindow = new FileCreatedDetected();
             // fileCreatedWindow.Hide();
 
-            string PathTowatch = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            CreateFileWatcher(Directory.GetParent(PathTowatch) + "\\Downloads\\");
+            //string PathTowatch = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //CreateFileWatcher(Directory.GetParent(PathTowatch) + "\\Downloads\\");
             //this.Hide();
             main = this;
 
@@ -165,9 +165,23 @@ namespace DownloadWatcherHashHelper
         private void BtnCompare_Click(object sender, RoutedEventArgs e)
         {
             //popup window for file to compare against.
-            var popup = new MainWindow(this);
-            popup.ShowDialog();
+            //var popup = new MainWindow(this);
+            //popup.ShowDialog();
 
+            var firstFile = (FileHashingControl)FirstHash.Children[0];
+            var SecondFile = (FileHashingControl)FirstHash.Children[1];
+            
+            if(firstFile.ValidHash() && SecondFile.ValidHash())
+            {
+                if(firstFile.GetHash() == SecondFile.GetHash())
+                {
+                    MessageBox.Show("File matches! File should be fine to run");
+                }
+                else
+                {
+                    MessageBox.Show("NOT A MATCH...DO NOT RUN IF COMPARING THE HASH!!");
+                }
+            }            
         }
 
         private void btnFileBrowse_Click(object sender, RoutedEventArgs e)
