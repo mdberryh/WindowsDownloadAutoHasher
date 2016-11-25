@@ -93,6 +93,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FileHasherControlPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FileHashingControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +119,9 @@
       <DependentUpon>FileHashedPrompt.xaml</DependentUpon>
     </Compile>
     <Compile Include="FileHasher.cs" />
+    <Compile Include="FileHasherControlPage.xaml.cs">
+      <DependentUpon>FileHasherControlPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FileHashingControl.xaml.cs">
       <DependentUpon>FileHashingControl.xaml</DependentUpon>
     </Compile>

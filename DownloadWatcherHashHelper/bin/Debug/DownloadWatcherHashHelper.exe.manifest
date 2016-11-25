@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DownloadWatcherHashHelper.exe" size="26112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DownloadWatcherHashHelper.exe" size="28672">
       <assemblyIdentity name="DownloadWatcherHashHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OY/MICYYpDATd8NjE9aelkDjy7Cn/wibsgdhSvETzgc=</dsig:DigestValue>
+        <dsig:DigestValue>sOUwe6B+VinXlMYhHLAG21bP4H9US1qYeJLtOFsbz6M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
