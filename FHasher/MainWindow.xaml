@@ -11,6 +11,7 @@
             <mui:LinkGroup.Links>
                 <!--<mui:Link DisplayName="home" Source="/Pages/Home.xaml" />-->
                 <mui:Link DisplayName="Compare Hashes" Source="/Pages/FileHasherPage.xaml" />
+                <mui:Link DisplayName="Find Duplicate Files" Source="/Pages/FileHasherPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
